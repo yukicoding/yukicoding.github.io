@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>hexo的主题更换</title>
+    <link href="/2020/04/12/hexo%E7%9A%84%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2/"/>
+    <url>/2020/04/12/hexo%E7%9A%84%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2/</url>
+    
+    <content type="html"><![CDATA[<h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><h2 id="今天好"><a href="#今天好" class="headerlink" title="今天好"></a>今天好</h2><p><img src="/img/test.png" srcset="/img/loading.gif" alt=""></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo</title>
     <link href="/2020/04/10/a/"/>
     <url>/2020/04/10/a/</url>
