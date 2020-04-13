@@ -4,11 +4,30 @@
   
   
   <entry>
+    <title>数据类型</title>
+    <link href="/2020/04/13/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <url>/2020/04/13/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="数据类型学习总结"><a href="#数据类型学习总结" class="headerlink" title="数据类型学习总结"></a>数据类型学习总结</h1><p>基本的八种数据类型</p><hr><p>其中常见：<br><strong>Number</strong>：number 类型代表整数和浮点数<br><strong>string</strong>：字符串<br><strong>boolean</strong>：boolean 类型仅包含两个值：true 和 false。<br><strong>null</strong>：表示值为’空’’未知’<br><strong>undenfined</strong>：未被赋值<br><strong>BigInt</strong>： 类型是最近被添加到 JavaScript 语言中的，用于表示任意长度的整数。<br><strong>symbol</strong>：symbol 类型用于创建对象的唯一标识符（后面补充）</p><p>特殊：<br><strong>object</strong>：object 类型是一个特殊的类型（后面补充）</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>javascript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo的主题更换</title>
     <link href="/2020/04/12/hexo%E7%9A%84%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2/"/>
     <url>/2020/04/12/hexo%E7%9A%84%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2/</url>
     
-    <content type="html"><![CDATA[<h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1><h2 id="今天好"><a href="#今天好" class="headerlink" title="今天好"></a>今天好</h2><p><img src="/img/test.png" srcset="/img/loading.gif" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1>]]></content>
     
     
     
