@@ -50,44 +50,6 @@
   
   
   <entry>
-    <title>hexo的主题更换</title>
-    <link href="/2020/04/12/hexo%E7%9A%84%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2/"/>
-    <url>/2020/04/12/hexo%E7%9A%84%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2/</url>
-    
-    <content type="html"><![CDATA[<h1 id="你好"><a href="#你好" class="headerlink" title="你好"></a>你好</h1>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>hexo</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hexo</title>
-    <link href="/2020/04/10/a/"/>
-    <url>/2020/04/10/a/</url>
-    
-    <content type="html"><![CDATA[<h3 id="hexo的首次体验"><a href="#hexo的首次体验" class="headerlink" title="hexo的首次体验"></a>hexo的首次体验</h3><p>第一次尝试部署在线网站，基于hexo+Github的新手Blog，主要用来记录每天的学习情况和&gt;总结<br>希望能够学到更多有用的知识</p><hr>]]></content>
-    
-    
-    
-    <tags>
-      
-      <tag>首次体验</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hello World</title>
     <link href="/2020/04/10/hello-world/"/>
     <url>/2020/04/10/hello-world/</url>
