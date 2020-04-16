@@ -17,7 +17,7 @@
   <meta name="description" content="这是第一个网站&#39;&#39;">
   <meta name="author" content="Huangyongqi">
   <meta name="keywords" content="">
-  <title>数据类型 - Yongqi</title>
+  <title>symbol的简单认识 - Yongqi</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
@@ -128,8 +128,8 @@
               
                 <div class="mt-3 post-meta">
                   <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-                  <time datetime="2020-04-13 16:55">
-                    星期一, 四月 13日 2020, 4:55 下午
+                  <time datetime="2020-04-16 23:38">
+                    星期四, 四月 16日 2020, 11:38 晚上
                   </time>
                 </div>
               
@@ -139,7 +139,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    127 字
+                    367 字
                   </span>
                 
 
@@ -149,7 +149,7 @@
                       <i class="iconfont icon-clock-fill"></i>
                     
                     
-                    1
+                    4
                      分钟
                   </span>
                 
@@ -178,8 +178,38 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="数据类型学习总结"><a href="#数据类型学习总结" class="headerlink" title="数据类型学习总结"></a>数据类型学习总结</h1><p>基本的八种数据类型<br>其中常见：<br><strong>Number</strong>：number 类型代表整数和浮点数<br><strong>string</strong>：字符串<br><strong>boolean</strong>：boolean 类型仅包含两个值：true 和 false。<br><strong>null</strong>：表示值为’空’’未知’<br><strong>undenfined</strong>：未被赋值<br><strong>BigInt</strong>： 类型是最近被添加到 JavaScript 语言中的，用于表示任意长度的整数。<br><strong>symbol</strong>：symbol 类型用于创建对象的唯一标识符（后面补充）</p>
-<p>特殊：<br><strong>object</strong>：object 类型是一个特殊的类型（后面补充）</p>
+              <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Symbol是Es6中引入的新的数据类型（原有：number、string、null、undeifend、boolean、boject）</p>
+<h1 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h1><p>理解为一种标识唯一性的id，可用于区分名字相同的不同对象。</p>
+<h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><pre><code> let user = symbol() //给user添加唯一的symbol </code></pre><p>当然，symbol()函数是一个可传参的函数，symbol(‘用来描述你的symbol以达到区分的作用’)</p>
+<pre><code> user1 = symbol(&#39;user1&#39;) </code></pre><p>值得一提的是此时判断并不相等，证明了symbol的唯一性</p>
+<pre><code>  let user1 = symbol(&#39;user&#39;)
+  let user2 = symbol(&#39;user&#39;)
+  alert(user1 == user) //false</code></pre><p>下面介绍另一种创建symbol的方法，这个方法与上面的有所不同，它并不是直接创建一个symbol，而是先在内存中判断是否存在相同的symbol，如存在直接赋值</p>
+<pre><code>let user1 = symbol.for(&#39;key&#39;)
+let user2 = symbol.for(&#39;key&#39;)
+alert(user1 == user2) //ture</code></pre><p>当我想取得symbol的名字时（只能取得以for方式定义的symbol值）</p>
+<pre><code>let a = symbol.Forkey(&#39;user1&#39;)//key</code></pre><p>下面位实战环节，若我有2个对象且名字相同，但属性不同，如何利用symbol表示不同的对象？</p>
+<pre><code>let user1{
+    name:&#39;hyq&#39;,
+    key : symbol()
+};
+
+let user2{
+    name : &#39;hyq&#39;,
+    key ；symbol()
+};
+
+let user = {
+    [user1.key]:{
+        math : 100,
+        English : 100
+    },
+    [user2.key]:{
+        math : 10,
+        English : 10
+    }
+}
+console.log(user[user1.key]) //打印user1的分数。</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Symbol是Es6中引入的新的数据类型（原有：number、string、null、undeifend、boolean、boject）<br>可以简单的把symbol想象成一个id，名字是不唯一的，但id是唯一的。</p>
 
             </article>
             <hr>
@@ -197,7 +227,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/javascript/">javascript</a>
+                      <a class="hover-with-bg" href="/tags/JavaScript/">JavaScript</a>
                     
                   </div>
                 
@@ -208,18 +238,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/04/13/let%E4%B8%8Evar%E7%9A%84%E5%8C%BA%E5%88%AB/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">let与var的区别</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/04/10/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2020/04/15/%E3%80%8A%E8%AE%A4%E7%9F%A5%E5%A4%A9%E6%80%A7%E3%80%8B/">
+                        <span class="hidden-mobile">《认知天性》</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -375,7 +399,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "数据类型&nbsp;",
+        "symbol的简单认识&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
