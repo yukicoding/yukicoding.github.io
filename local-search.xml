@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>数组的几个重要方法</title>
+    <link href="/2020/04/21/%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%87%8D%E8%A6%81%E6%96%B9%E6%B3%95/"/>
+    <url>/2020/04/21/%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%87%8D%E8%A6%81%E6%96%B9%E6%B3%95/</url>
+    
+    <content type="html"><![CDATA[<h1 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h1><p> <code>forEa</code>使函数作用在每个数组元素上，但是没有返回值。</p><p> 例子：//给每个人添加一个函数，返回一个班级属性</p><pre><code>    let arr = [        {name:&#39;xiaoming&#39;,grade:99},        {name:&#39;xiaohei&#39;,grade:89},        {name:&#39;xiaolong&#39;,grade:59}    ];    arr.forEach(function(item,index,array){        return item[&#39;class&#39;] = &#39;一年级一班&#39;;    }) </code></pre><h1 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h1><p><code>filter</code>使用 filter 可以过滤数据中元素.</p><p>例子： //找出calss = 一班的同学</p><pre><code>    let arr = [        {name:&#39;xiaoming&#39;,grade:99,class=&#39;一班&#39;},        {name:&#39;xiaohei&#39;,grade:89}，class=&#39;二班&#39;,        {name:&#39;xiaolong&#39;,grade:59,class = &#39;一班&#39;}    ];let cssLessons = lessons.filter(function (item, index, array) {  if (item.class == &#39;一班&#39;) {    return true;  }});</code></pre><h1 id="map"><a href="#map" class="headerlink" title="map"></a>map</h1><p>使用 <code>map</code> 映射可以在数组的所有元素上应用函数，用于映射出新的值</p><p>例子：//获取一个新数组，并且包含旧数组的一些属性</p><pre><code>let lessons = [  {title: &#39;媒体查询响应式布局&#39;,category: &#39;css&#39;},  {title: &#39;FLEX 弹性盒模型&#39;,category: &#39;css&#39;},  {title: &#39;MYSQL多表查询随意操作&#39;,category: &#39;mysql&#39;}];console.log(lessons.map(function(item){    return item.title});</code></pre><h1 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h1><p>使用 <code>reduce</code> 函数可以从前面开始迭代数组的所有元素<br>参数 | 说明 |<br>-|-|-<br>pre | 调用上次返回的结果（首次则为0） |<br>cur | 当前元素值|<br>index | 当前索引|<br>array | 原数组 |</p><p>例子：//统计指定值出现次数</p><pre><code>function countNumber(arry,item){    return arry.reduce(function(pre,cur){        return pre+= cur == item ? 1:0    },0)}let arr = [1,2,3,4,5,62,1,1,1]console.log(countNumber(arr,1));//统计arr里的1的数量</code></pre><p>例子：//找出最大值</p><pre><code>function arrMax(array){    return array.reduce(function(max,cur){        return max &gt; cur ? max:cur     },[])}let arr = [1,2,3,4,5,62,1,1,1]console.log(arrMax(arr));</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>及时总结发现问题，打好数组基础很关键，以后工作中会出现大量操作数组的实战项目。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>JavaScript</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JavaScript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>人性的弱点</title>
+    <link href="/2020/04/21/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/"/>
+    <url>/2020/04/21/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="一、不要批评指责他人"><a href="#一、不要批评指责他人" class="headerlink" title="一、不要批评指责他人"></a>一、不要批评指责他人</h2><p><strong>其实我觉得说的很对，在我们日常生活中，往往会因为一些小事而去指责批评他人，则其中的原因只是为了证明自己的观点正确，然后呢？ 对方并不会因为你指责他应该怎么做而感谢你，往往只会更加愤怒，请不要随意批评他人！</strong></p><h2 id="二、多赞美他人"><a href="#二、多赞美他人" class="headerlink" title="二、多赞美他人"></a>二、多赞美他人</h2><p><strong>请不要吝啬你的赞美，每人的内心都渴望被他人称赞，想象你一大早出门，别人便夸奖你今天看起来很精神，你会不会因此一整天都带着笑容且充满自信的度过?</strong></p><h2 id="三、站在对方的立场上考虑事情"><a href="#三、站在对方的立场上考虑事情" class="headerlink" title="三、站在对方的立场上考虑事情"></a>三、站在对方的立场上考虑事情</h2><p><strong>当我们发现与对方观点不合时，请先不要发表意见看法，请先站在对方的角度考虑，为什么对方这么做？思考完后在站在对方的角度和对方讨论，这会让对方对你颇有好感，且不会发生不愉快的事情</strong></p><h2 id="四、发自内心的为他人着想"><a href="#四、发自内心的为他人着想" class="headerlink" title="四、发自内心的为他人着想"></a>四、发自内心的为他人着想</h2><p><strong>让生活多一些爱，多点关心他人，记住对方的一些小事情或者微不足道的瞬间，也许未来会发生什么呢？当一个许久未见的朋友发现你还记得他名字，当一个好友生日时你送了他当时发朋友圈提到的一个喜欢的玩偶，这都是特别暖心的事情</strong></p><h2 id="五、比起倾诉者，请多做倾听者"><a href="#五、比起倾诉者，请多做倾听者" class="headerlink" title="五、比起倾诉者，请多做倾听者"></a>五、比起倾诉者，请多做倾听者</h2><p><strong>扮演好一个倾听者往往能给你带来更多益处，别人也很乐意与你交心谈心</strong></p><h2 id="六、谈论对方的兴趣爱好"><a href="#六、谈论对方的兴趣爱好" class="headerlink" title="六、谈论对方的兴趣爱好"></a>六、谈论对方的兴趣爱好</h2><p><strong>当与对方交谈时，请主动提及对方的兴趣爱好，并且表现出感兴趣的样子，对方则会很乐意的与你交谈，此时能激发对方一种为他人普及知识的快感，这很重要</strong></p><h2 id="七、主动承认错误"><a href="#七、主动承认错误" class="headerlink" title="七、主动承认错误"></a>七、主动承认错误</h2><p><strong>当自己做错了一些错误，或是自己的一些举动间接导致错误发生，请主动承认错误，不要找诸多借口为自己辩护，这样只会让别人觉得你是一个喜欢逃避的人，请先给对方一个诚挚的道歉，并且表现的十分诚恳，以及下次再也不会犯的决心</strong></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书</category>
+      
+      <category>人性的弱点</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>读书</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>symbol的简单认识</title>
     <link href="/2020/04/16/%E5%AF%B9symbol%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86/"/>
     <url>/2020/04/16/%E5%AF%B9symbol%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86/</url>

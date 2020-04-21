@@ -17,7 +17,7 @@
   <meta name="description" content="这是第一个网站&#39;&#39;">
   <meta name="author" content="Huangyongqi">
   <meta name="keywords" content="">
-  <title>symbol的简单认识 - Yongqi</title>
+  <title>人性的弱点 - Yongqi</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/3.0.1/github-markdown.min.css" />
@@ -128,8 +128,8 @@
               
                 <div class="mt-3 post-meta">
                   <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-                  <time datetime="2020-04-16 23:38">
-                    星期四, 四月 16日 2020, 11:38 晚上
+                  <time datetime="2020-04-21 21:00">
+                    星期二, 四月 21日 2020, 9:00 晚上
                   </time>
                 </div>
               
@@ -139,7 +139,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    367 字
+                    603 字
                   </span>
                 
 
@@ -149,7 +149,7 @@
                       <i class="iconfont icon-clock-fill"></i>
                     
                     
-                    4
+                    6
                      分钟
                   </span>
                 
@@ -178,38 +178,13 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Symbol是Es6中引入的新的数据类型（原有：number、string、null、undeifend、boolean、boject）</p>
-<h1 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h1><p>理解为一种标识唯一性的id，可用于区分名字相同的不同对象。</p>
-<h1 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h1><pre><code> let user = symbol() //给user添加唯一的symbol </code></pre><p>当然，symbol()函数是一个可传参的函数，symbol(‘用来描述你的symbol以达到区分的作用’)</p>
-<pre><code> user1 = symbol(&#39;user1&#39;) </code></pre><p>值得一提的是此时判断并不相等，证明了symbol的唯一性</p>
-<pre><code>  let user1 = symbol(&#39;user&#39;)
-  let user2 = symbol(&#39;user&#39;)
-  alert(user1 == user) //false</code></pre><p>下面介绍另一种创建symbol的方法，这个方法与上面的有所不同，它并不是直接创建一个symbol，而是先在内存中判断是否存在相同的symbol，如存在直接赋值</p>
-<pre><code>let user1 = symbol.for(&#39;key&#39;)
-let user2 = symbol.for(&#39;key&#39;)
-alert(user1 == user2) //ture</code></pre><p>当我想取得symbol的名字时（只能取得以for方式定义的symbol值）</p>
-<pre><code>let a = symbol.Forkey(&#39;user1&#39;)//key</code></pre><p>下面位实战环节，若我有2个对象且名字相同，但属性不同，如何利用symbol表示不同的对象？</p>
-<pre><code>let user1{
-    name:&#39;hyq&#39;,
-    key : symbol()
-};
-
-let user2{
-    name : &#39;hyq&#39;,
-    key ；symbol()
-};
-
-let user = {
-    [user1.key]:{
-        math : 100,
-        English : 100
-    },
-    [user2.key]:{
-        math : 10,
-        English : 10
-    }
-}
-console.log(user[user1.key]) //打印user1的分数。</code></pre><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>Symbol是Es6中引入的新的数据类型（原有：number、string、null、undeifend、boolean、boject）<br>可以简单的把symbol想象成一个id，名字是不唯一的，但id是唯一的。</p>
+              <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="一、不要批评指责他人"><a href="#一、不要批评指责他人" class="headerlink" title="一、不要批评指责他人"></a>一、不要批评指责他人</h2><p><strong>其实我觉得说的很对，在我们日常生活中，往往会因为一些小事而去指责批评他人，则其中的原因只是为了证明自己的观点正确，然后呢？ 对方并不会因为你指责他应该怎么做而感谢你，往往只会更加愤怒，请不要随意批评他人！</strong></p>
+<h2 id="二、多赞美他人"><a href="#二、多赞美他人" class="headerlink" title="二、多赞美他人"></a>二、多赞美他人</h2><p><strong>请不要吝啬你的赞美，每人的内心都渴望被他人称赞，想象你一大早出门，别人便夸奖你今天看起来很精神，你会不会因此一整天都带着笑容且充满自信的度过?</strong></p>
+<h2 id="三、站在对方的立场上考虑事情"><a href="#三、站在对方的立场上考虑事情" class="headerlink" title="三、站在对方的立场上考虑事情"></a>三、站在对方的立场上考虑事情</h2><p><strong>当我们发现与对方观点不合时，请先不要发表意见看法，请先站在对方的角度考虑，为什么对方这么做？思考完后在站在对方的角度和对方讨论，这会让对方对你颇有好感，且不会发生不愉快的事情</strong></p>
+<h2 id="四、发自内心的为他人着想"><a href="#四、发自内心的为他人着想" class="headerlink" title="四、发自内心的为他人着想"></a>四、发自内心的为他人着想</h2><p><strong>让生活多一些爱，多点关心他人，记住对方的一些小事情或者微不足道的瞬间，也许未来会发生什么呢？当一个许久未见的朋友发现你还记得他名字，当一个好友生日时你送了他当时发朋友圈提到的一个喜欢的玩偶，这都是特别暖心的事情</strong></p>
+<h2 id="五、比起倾诉者，请多做倾听者"><a href="#五、比起倾诉者，请多做倾听者" class="headerlink" title="五、比起倾诉者，请多做倾听者"></a>五、比起倾诉者，请多做倾听者</h2><p><strong>扮演好一个倾听者往往能给你带来更多益处，别人也很乐意与你交心谈心</strong></p>
+<h2 id="六、谈论对方的兴趣爱好"><a href="#六、谈论对方的兴趣爱好" class="headerlink" title="六、谈论对方的兴趣爱好"></a>六、谈论对方的兴趣爱好</h2><p><strong>当与对方交谈时，请主动提及对方的兴趣爱好，并且表现出感兴趣的样子，对方则会很乐意的与你交谈，此时能激发对方一种为他人普及知识的快感，这很重要</strong></p>
+<h2 id="七、主动承认错误"><a href="#七、主动承认错误" class="headerlink" title="七、主动承认错误"></a>七、主动承认错误</h2><p><strong>当自己做错了一些错误，或是自己的一些举动间接导致错误发生，请主动承认错误，不要找诸多借口为自己辩护，这样只会让别人觉得你是一个喜欢逃避的人，请先给对方一个诚挚的道歉，并且表现的十分诚恳，以及下次再也不会犯的决心</strong></p>
 
             </article>
             <hr>
@@ -219,7 +194,9 @@ console.log(user[user1.key]) //打印user1的分数。</code></pre><h1 id="总�
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/JavaScript/">JavaScript</a>
+                      <a class="hover-with-bg" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+                    
+                      <a class="hover-with-bg" href="/categories/%E8%AF%BB%E4%B9%A6/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/">人性的弱点</a>
                     
                   </div>
                 
@@ -227,7 +204,7 @@ console.log(user[user1.key]) //打印user1的分数。</code></pre><h1 id="总�
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/JavaScript/">JavaScript</a>
+                      <a class="hover-with-bg" href="/tags/%E8%AF%BB%E4%B9%A6/">读书</a>
                     
                   </div>
                 
@@ -238,9 +215,9 @@ console.log(user[user1.key]) //打印user1的分数。</code></pre><h1 id="总�
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/2020/04/21/%E4%BA%BA%E6%80%A7%E7%9A%84%E5%BC%B1%E7%82%B9/">
+                      <a href="/2020/04/21/%E6%95%B0%E7%BB%84%E7%9A%84%E5%87%A0%E4%B8%AA%E9%87%8D%E8%A6%81%E6%96%B9%E6%B3%95/">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">人性的弱点</span>
+                        <span class="hidden-mobile">数组的几个重要方法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -248,8 +225,8 @@ console.log(user[user1.key]) //打印user1的分数。</code></pre><h1 id="总�
                   <div class="post-next col-6">
                     
                     
-                      <a href="/2020/04/15/%E3%80%8A%E8%AE%A4%E7%9F%A5%E5%A4%A9%E6%80%A7%E3%80%8B/">
-                        <span class="hidden-mobile">《认知天性》</span>
+                      <a href="/2020/04/16/%E5%AF%B9symbol%E7%9A%84%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86/">
+                        <span class="hidden-mobile">symbol的简单认识</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -405,7 +382,7 @@ console.log(user[user1.key]) //打印user1的分数。</code></pre><h1 id="总�
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "symbol的简单认识&nbsp;",
+        "人性的弱点&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
