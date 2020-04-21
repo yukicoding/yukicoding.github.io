@@ -139,7 +139,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    444 字
+                    433 字
                   </span>
                 
 
@@ -209,8 +209,36 @@ let cssLessons = lessons.filter(function (item, index, array) {
 
 console.log(lessons.map(function(item){
     return item.title
-});</code></pre><h1 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h1><p>使用 <code>reduce</code> 函数可以从前面开始迭代数组的所有元素<br>参数 | 说明 |<br>-|-|-<br>pre | 调用上次返回的结果（首次则为0） |<br>cur | 当前元素值|<br>index | 当前索引|<br>array | 原数组 |</p>
-<p>例子：//统计指定值出现次数</p>
+});</code></pre><h1 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h1><p>使用 <code>reduce</code> 函数可以从前面开始迭代数组的所有元素</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pre</td>
+<td>调用上次返回的结果（首次则为0）</td>
+<td></td>
+</tr>
+<tr>
+<td>cur</td>
+<td>当前元素值</td>
+<td></td>
+</tr>
+<tr>
+<td>index</td>
+<td>当前索引</td>
+<td></td>
+</tr>
+<tr>
+<td>array</td>
+<td>原数组</td>
+<td></td>
+</tr>
+</tbody></table>
 <pre><code>function countNumber(arry,item){
     return arry.reduce(function(pre,cur){
         return pre+= cur == item ? 1:0
