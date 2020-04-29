@@ -153,6 +153,91 @@
     
     
     <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/04/29/proto-%E4%B8%8Eprototype/">__proto__与prototype</a>
+
+      <a href="/2020/04/29/proto-%E4%B8%8Eprototype/" class="index-excerpt">
+        
+        
+          
+        
+        <div>总结proto对象有属性proto,proto指向的是该对象的构造函数的原型对象
+prototype方法有proto,还有prototype，prototype指向的是该方法的原型对象
+有关原型的一些方法
+setprototype(a,b) 将a的prototype指向b的prototypea instanceof b 判断 a 对象是否在b的原型链上存在一个构造函数的prototype属性，返回</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-04-29
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/JavaScript/">JavaScript</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/javascript/">javascript</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
+      <a class="index-header" href="/2020/04/29/Json%E7%9A%84%E5%88%9D%E8%AE%A4%E8%AF%86/">Json的初认识</a>
+
+      <a href="/2020/04/29/Json%E7%9A%84%E5%88%9D%E8%AE%A4%E8%AF%86/" class="index-excerpt">
+        
+        
+          
+        
+        <div>什么是jsonjson是一个轻量级的数据交换格式，便于他人阅读和编写当前后端进行数据传输时，往往数据格式是不一样的，这会很容易导致错误发生，所以需要一种将数据变成双方都能识别的格式，这就是json格式
+json的使用1、**stringify(x,y,z)
+将变成字符串形式，一般用来向其他语言传输使用,第一个参数选择转换目标，第二个参数指定需要保存的属性，第三个参数是空格个数（常规为2）JSON.</div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>&nbsp;2020-04-29
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/JavaScript/">JavaScript</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/JavaScript/">JavaScript</a>
+            
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <div class="col-12 col-md-12 mx-auto index-info">
       <a class="index-header" href="/2020/04/25/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E9%97%AD%E5%8C%85/">作用域与闭包</a>
 
       <a href="/2020/04/25/%E4%BD%9C%E7%94%A8%E5%9F%9F%E4%B8%8E%E9%97%AD%E5%8C%85/" class="index-excerpt">
@@ -514,34 +599,19 @@ js所有函数都是闭包
     </div>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/2020/04/10/hello-world/">Hello World</a>
-
-      <a href="/2020/04/10/hello-world/" class="index-excerpt">
-        
-        
-          
-        
-        <div>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick</div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-04-10
-          </div>
-        
-        
-        
-      </div>
-    </div>
-  </div>
 
 
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+  
+  <script>
+    for (ele of document.getElementById("pagination").getElementsByTagName("a")) {
+      ele.href += '#board';
+    }
+  </script>
 
 
 
