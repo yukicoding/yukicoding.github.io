@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>模块化编程的基本操作</title>
+    <link href="/2020/05/09/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+    <url>/2020/05/09/%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</url>
+    
+    <content type="html"><![CDATA[<h1 id="模块化编程的作用"><a href="#模块化编程的作用" class="headerlink" title="模块化编程的作用"></a>模块化编程的作用</h1><p><strong>防止项目过大时造成文件难以管理</strong></p><h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><pre><code>&lt;script type = &#39;module&#39;&gt;&lt;/script&gt; //定义引入模块属性</code></pre><ol><li><p>导出<br><strong>export</strong>接上属性或者方法 </p></li><li><p>导入<br>  <strong>import</strong>街上属性或者方法 </p></li><li><p>批量导入/导出<br>export {变量1，变量2，方法1，方法2}<br>import {变量1，变量2，方法1，方法2} from ./xx.js     </p></li><li><p>别名导入<br>import {…… as a，…… as b}from ./xx.js  //导入后 可直接将a、b 作为变量使用</p></li><li><p>默认导出<br>default + 导出的变量/方法 定义默认接口， 导入时则无需相同变量名，可自行设置</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>JavaScript</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>javascript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Es6类的使用</title>
+    <link href="/2020/05/09/Es6%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <url>/2020/05/09/Es6%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="类学习的简单总结"><a href="#类学习的简单总结" class="headerlink" title="类学习的简单总结"></a>类学习的简单总结</h1><pre><code>class User{    constructor{} //new的时候自动执行，初始化对象    方法1         //其中不需要 ，隔开    方法2    get xx{}    set xx{}  //也存在get 和 set 访问器    static xx //静态属性    static xx = function(){} //静态方法     //不需要new后调用，可直接调用}</code></pre><p><strong>访问控制</strong></p><ul><li>public 公共属性</li><li>protected 受保护的属性，变量名以 _(下划线)开头 只能从内部访问</li><li>private 私有属性, 变量名以 # 开头</li></ul><p><strong>继承</strong></p><ul><li>extends <pre><code>class a extends b  //a类继承b类(a可以使用b的属性和方法)</code></pre></li><li>super<br>指向父级(可理解为向上一层调用)也可以直接使用腹肌的方法</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>JavaScript</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>javascript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>__proto__与prototype</title>
     <link href="/2020/04/29/proto-%E4%B8%8Eprototype/"/>
     <url>/2020/04/29/proto-%E4%B8%8Eprototype/</url>
