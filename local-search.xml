@@ -4,11 +4,36 @@
   
   
   <entry>
+    <title>原型</title>
+    <link href="/2020/06/29/%E5%8E%9F%E5%9E%8B/"/>
+    <url>/2020/06/29/%E5%8E%9F%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<p><code>prototype</code> 构造函数的原型属性<br><code>Object.create</code> 创建对象时指定原型<br><code>__proto__</code> 声明自定义的非标准属性设置原型，解决之前通过 <code>Object.create</code> 定义原型，而没提供获取方法<br><code>Object.setPrototypeOf</code> 设置对象原型<br>这几种方式都可以管理原型，一般以我个人情况来讲使用 prototype 更改构造函数原型，使用 <code>Object.setPrototypeOf</code> 与 <code>Object.getPrototypeOf</code> 获取或设置原型。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>JavaScript</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JavaScript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>promise</title>
     <link href="/2020/05/13/promise/"/>
     <url>/2020/05/13/promise/</url>
     
-    <content type="html"><![CDATA[<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><p>异步简单过程（用洗衣服吃饭做例子）<br><img src="/img/%E5%BC%82%E6%AD%A5.png" srcset="/img/loading.gif" alt=""></p><h1 id="何为同步、异步"><a href="#何为同步、异步" class="headerlink" title="何为同步、异步"></a>何为同步、异步</h1><p>同步：简单理解为洗衣服时把衣服放进洗衣机后等待衣服洗完然后在收好衣服后去吃饭<br>异步：理解为把衣服放进洗衣机后去吃饭，所以洗衣服的时间也正在吃饭，最后吃完去收衣服即可。</p><blockquote><p>异步可以避免等到界面依次加载后在显示，从而避免降低用户体验。</p></blockquote><p>Promise包含&gt;<code>pending</code>、&gt;<code>fulfilled</code>、<code>rejected</code>三种状态</p><h1 id="promise语法"><a href="#promise语法" class="headerlink" title="promise语法"></a>promise语法</h1><pre><code>    new Promise((resolve,reject)=&gt;{        resolve()//已经解决好        reject()//拒绝处理，解决失败        then 理解为任务加载后进行的操作    }).then(value=&gt;{},reason=&gt;{})//resolve成功时进行value里的操作，    reject失败是进行reason里的操作</code></pre><blockquote><p>每当pomise执行时，会创造一个微任务区，将任务放入微任务中，进行预加载，当解决成功后 进行then的操作选择操作</p></blockquote><pre><code>    let promise = new Promise((resolve,reject)=&gt;{        console.log(&#39;promise&#39;);        resolve();    }).then(value=&gt;{        console.log(&#39;value&#39;);     })    console.log(&#39;outside&#39;);</code></pre><p><strong>执行结果为promise outside value</strong></p><p><strong>当不需要接受返回参数时可将then(null)进行占位但不需要进行操作</strong></p><h1 id="catch"><a href="#catch" class="headerlink" title="catch"></a>catch</h1><pre><code>    then(value,reason).catch(error={})//当末尾加上catch时，可以统一处理错误。</code></pre>]]></content>
+    <content type="html"><![CDATA[<h1 id="什么是Promise"><a href="#什么是Promise" class="headerlink" title="什么是Promise"></a>什么是Promise</h1><p>Promise是异步编程的一种解决方法，比传统的异步解决方法(回调函数)、(事件)更加方便。现在已经被纳入了ES6中</p><h1 id="如何理解-Promise"><a href="#如何理解-Promise" class="headerlink" title="如何理解 Promise"></a>如何理解 Promise</h1><p>为了便于理解 Promise，大家除了要多加练习以外，最好的方式是能够将Promise的机制与现实生活中的例子联系起来，这样才能真正得到消化。<br>我们可以把 Promise 比作一个保姆，家里的一连串的事情，你只需要吩咐给他，他就能帮你做，你就可以去做其他事情了。<br>比如，作为一家之主的我，某一天要出门办事，但是我还要买菜做饭送到老婆单位（请理解我在家里的地位。。）<br>出门办的事情很重要，买菜做饭也重要。。但我自己只能做一件事。<br>这时我就可以把买菜做饭的事情交给保姆，我会告诉她：</p><p>你先去超市买菜。<br>用超市买回来的菜做饭。<br>将做好的饭菜送到老婆单位。<br>送到单位后打电话告诉我。</p><h1 id="promise语法"><a href="#promise语法" class="headerlink" title="promise语法"></a>promise语法</h1><pre><code>    new Promise((resolve,reject)=&gt;{        resolve()//已经解决好        reject()//拒绝处理，解决失败        then 理解为任务加载后进行的操作    }).then(value=&gt;{},reason=&gt;{})//resolve成功时进行value里的操作，    reject失败是进行reason里的操作</code></pre><blockquote><p>每当pomise执行时，会创造一个微任务区，将任务放入微任务中，进行预加载，当解决成功后 进行then的操作选择操作</p></blockquote><pre><code>    let promise = new Promise((resolve,reject)=&gt;{        console.log(&#39;promise&#39;);        resolve();    }).then(value=&gt;{        console.log(&#39;value&#39;);     })    console.log(&#39;outside&#39;);</code></pre><blockquote><p>当后续返回的还是异步任务的话需继续return一个新的promise且用then操作，知道出现同步任务后可直接return结果<br><strong>当不需要接受返回参数时可将then(null)进行占位但不需要进行操作</strong></p></blockquote><h1 id="catch"><a href="#catch" class="headerlink" title="catch"></a>catch</h1><pre><code>    then(value,reason).catch(error={})//当末尾加上catch时，可以统一处理错误。</code></pre>]]></content>
     
     
     <categories>
